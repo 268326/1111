@@ -167,8 +167,5 @@ hostname = duckduckgo.com
 # gg  xxx (Google 搜索)
 ^https:\/\/duckduckgo.com\/\?q=gg\+([^&]+).+ url 302 https://www.google.com/search?q=$1
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+gg.+ url 302 https://www.google.com/search?q=$1
-# ios  xxx (苹果应用搜索)
-^https:\/\/duckduckgo.com\/\?q=ios\+([^&]+).+ url 302 https://www.qimai.cn/search/index/search/$1
-^https:\/\/duckduckgo.com\/\?q=([^+]+)\+ios.+ url 302 https://www.qimai.cn/search/index/search/$1
 #     xxx （无指令默认为 Bing）
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302 https://www.bing.com/search?q=$1
