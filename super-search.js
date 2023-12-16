@@ -1,4 +1,4 @@
-hostname = bing.com
+hostname = www.bing.com
 
 # p    xxx （快捷指令）
 ^https:\/\/bing.com\/\?q=p\+([^&]+).+ url 302 shortcuts://run-shortcut?name=Passwords&input=$1
