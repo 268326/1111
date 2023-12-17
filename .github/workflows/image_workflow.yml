@@ -3,10 +3,10 @@ name: Image Workflow
 on:
   push:
     paths:
-      - 'test/**' 
+      - 'icon/**' 
   pull_request:
     paths:
-      - 'test/**' 
+      - 'icon/**' 
   workflow_dispatch:
 
 jobs:
