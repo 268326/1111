@@ -1,0 +1,54 @@
+name: Image Workflow
+
+on:
+  push:
+    paths:
+      - 'test/**' 
+  pull_request:
+    paths:
+      - 'test/**' 
+  workflow_dispatch:
+
+jobs:
+  generate_json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Generate JSON
+      run: |
+        python .github/scripts/generate_image_json.py
+
+    - name: Load output variables
+      run: |
+        export $(dotenv -f output.env list)
+
+    - name: Save state
+      run: echo "ICONS_JSON_PATH=${ICONS_JSON_PATH}" >> $GITHUB_STATE
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: json-artifact
+        path: $ICONS_JSON_PATH
+
+    - name: Show working directory contents (After generate_json.py)
+      run: ls -R
+
+    - name: Debug file existence and content
+      run: |
+        echo "Current working directory:" $(pwd)
+        echo "List of files in the directory:" $(ls -R)
+        cat $ICONS_JSON_PATH
