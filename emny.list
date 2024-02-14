@@ -1,5 +1,3 @@
-#jms
-host,cf.jmsooo.com,direct
 #NMemby
 host,film.ohhhh.org,direct
 #paul
@@ -23,7 +21,8 @@ host,jz.mcjoker.xyz,direct
 
 
 
-
+#jms
+host,cf.jmsooo.com,emby
 #ntr
 host,stream.ntrrr.top,emby
 #垃圾影音
