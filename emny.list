@@ -24,7 +24,7 @@ host,jz.mcjoker.xyz,direct
 #jms
 host,cf.jmsooo.com,emby
 #ntr
-host,stream.ntrrr.top,emby
+host,stream.ntrrr.top,direct
 #垃圾影音
 host,free.xmsl.org,emby
 host,cf.xmsl.org,emby
