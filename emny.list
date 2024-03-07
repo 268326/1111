@@ -17,7 +17,10 @@ host,embyplus.org,direct
 host,free.poloemby.xyz,direct
 #叔服
 host,jz.mcjoker.xyz,direct 
- 
+#lyrebird
+host,direct.lyrebirdemby.com,emby
+host,cdn.lyrebirdemby.com,direct
+
 
 
 
