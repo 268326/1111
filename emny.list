@@ -27,7 +27,7 @@ host,cdn.lyrebirdemby.com,direct
 #jms
 host,cf.jmsooo.com,emby
 #ntr
-host,stream.ntrrr.top,direct
+host,stream.ntrrr.top,emby
 #垃圾影音
 host,free.xmsl.org,emby
 host,cf.xmsl.org,emby
